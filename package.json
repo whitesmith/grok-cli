@@ -1,0 +1,47 @@
+{
+  "name": "grok-cli",
+  "version": "1.0.3",
+  "description": "A CLI tool that starts anthropic-proxy with Grok model and runs claude-code",
+  "main": "index.js",
+  "bin": {
+    "grok": "index.js"
+  },
+  "scripts": {
+    "publish:patch": "npm version patch && npm publish",
+    "publish:minor": "npm version minor && npm publish",
+    "publish:major": "npm version major && npm publish",
+    "publish:beta": "npm version prerelease --preid=beta && npm publish --tag beta",
+    "local:install": "npm link",
+    "local:uninstall": "npm unlink -g grok-cli",
+    "clean": "npm cache clean --force"
+  },
+  "files": [
+    "index.js",
+    "proxy.js",
+    "README.md",
+    "package.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whitesmith/grok-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/whitesmith/grok-cli/issues"
+  },
+  "homepage": "https://github.com/whitesmith/grok-cli#readme",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "fastify": "^5.2.1",
+    "keytar": "^7.9.0"
+  },
+  "keywords": [
+    "grok",
+    "xai",
+    "anthropic",
+    "proxy",
+    "claude",
+    "cli",
+    "ai"
+  ],
+  "license": "MIT"
+}
