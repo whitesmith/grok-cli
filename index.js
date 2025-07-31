@@ -139,8 +139,10 @@ async function startClaude() {
     ANTHROPIC_API_KEY: 'sk-ant-api03-demo',
     ANTHROPIC_MODEL: options.reasoningModel,
     ANTHROPIC_SMALL_FAST_MODEL: options.completionModel,
+    CLAUDE_CODE_DISABLE_TERMINAL_TITLE: 1,
+    DISABLE_ERROR_REPORTING: 1,
+    DISABLE_NON_ESSENTIAL_MODEL_CALLS: 1,
     DISABLE_TELEMETRY: 1,
-    DISABLE_ERROR_REPORTING: 1
   };
   
   claudeProcess = spawn('claude', [], {
