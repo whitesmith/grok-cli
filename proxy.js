@@ -47,10 +47,6 @@ const start = async (port = 3000, options = {}) => {
   config = {
     baseUrl: options.baseUrl || 'https://api.x.ai',
     key: options.key,
-    models: {
-      reasoning: options.reasoningModel || 'grok-4',
-      completion: options.completionModel || 'grok-3',
-    },
     maxTokens: options.maxTokens || 16384,
     debug: options.debug || false
   }
@@ -178,7 +174,7 @@ const start = async (port = 3000, options = {}) => {
         },
       }))
       const openaiPayload = {
-        model: payload.thinking ? config.models.reasoning : config.models.completion,
+        model: payload.model,
         messages,
         max_tokens: config.maxTokens,
         temperature: payload.temperature !== undefined ? payload.temperature : 1,

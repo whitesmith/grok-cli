@@ -1,6 +1,6 @@
 {
   "name": "grok-cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A CLI tool that starts anthropic-proxy with Grok model and runs claude-code",
   "main": "index.js",
   "bin": {
